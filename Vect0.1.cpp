@@ -117,8 +117,6 @@ void generate(studentas& temp, int nd_kiekis) { // Atsitiktinio generavimo funkc
 		std::uniform_int_distribution<int>dist2(0, 10);
 		temp.vardas = Vard[dist(mt)];   // Iš vardų sąrašo atsitiktinai parenkamas vardas
 		temp.pavarde = Pav[dist(mt)];	// Iš vardų sąrašo atsitiktinai parenkamas pavardė
-		
-		temp.paz.resize(max);
-		temp.paz.push_back(dist2(mt));
+		for(int i=0; i<nd_kiekis; i++)	temp.paz.push_back(dist2(mt));
 		temp.egz = dist2(mt);
 }
