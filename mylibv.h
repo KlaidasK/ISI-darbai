@@ -30,7 +30,7 @@ using std::istringstream;
 using std::istringstream;
 
 char pas, pas2, pas3; // Pasirinkimas tarp pazymiu ivedimo ir atsitiktinio generavimo, pasirinkimas tarp vidurkio ir medianos
-std::ofstream out_f("Studentai.txt");
+std::ofstream out_f("Kursiokai.txt");
 
 template <class T>
 void statistika(vector <T> &tempas) {
