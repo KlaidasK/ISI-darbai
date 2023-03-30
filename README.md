@@ -42,7 +42,7 @@ Objektinis programavimas
 | 1000000  | 5.53011 s  | 4.47793 s | 0.362167 s  | 0.826443 s  | 1.1141 s  | 1.07979 s  | 13.7416 s  | 
 | 10000000  | 55.5535 s | 79.5637 s | 5.29102 s  | 8.27994 s  | 10.3865 s  | 10.6915 s  | 173.786 s  | 
 
-# Subversija 0.4
+# Subversija 0.5
 
 1. Skirtingų konteinerių testavimas
 2. Vector
