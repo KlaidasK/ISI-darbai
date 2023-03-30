@@ -42,7 +42,8 @@ void generate(studentas& temp, int nd_kiekis, int i) { // Atsitiktinio generavim
 }
 
 void skaitymas(std::string read_vardas, list<studentas>& grupe, int& max) {
-	std::list<string> splited;
+	//std::list<string> splited;
+	std::vector<string> splited;
 	std::string word, line;
 	max = 0;
 	double sk = 0.0; // Iš viso žodži? faile
@@ -69,7 +70,18 @@ void skaitymas(std::string read_vardas, list<studentas>& grupe, int& max) {
 
 	stul = float(sk / max); // Susiskai?iuojama stulpeli? skai?ius, stulpeliai visada sveikas skai?ius, nes kievienoje eilut?je turi b?ti tiek pat duomen?
 
-	for (int i = 0; i < stul; i++) {
+	for (int i = stul; i < sk; i = i + stul) {
+		temp.vardas = splited[i];
+		temp.pavarde = splited[i + 1];
+		for (int j = i + 2; j < i + stul - 1; j++) temp.paz.push_back(stoi(splited[j]));
+		temp.egz = stoi(splited[i + stul - 1]);
+		temp.vid = vidurk(temp);
+		grupe.push_back(temp);
+		temp.paz.clear();
+	}
+
+
+	/*for (int i = 0; i < stul; i++) {
 		splited.pop_front();
 	}
 	sk = sk - stul;
@@ -85,7 +97,8 @@ void skaitymas(std::string read_vardas, list<studentas>& grupe, int& max) {
 		grupe.push_back(temp);
 		temp.paz.clear();
 	}
-
+	*/
+	--max;
 	splited.resize(0);
 	auto end2 = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> diff2 = end2 - start2; // Skirtumas (s)
