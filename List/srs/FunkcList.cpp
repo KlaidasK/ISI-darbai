@@ -53,36 +53,6 @@ void skaitymas(std::string read_vardas, list<studentas>& grupe, int& max) {
 	studentas temp;
 	auto start2 = std::chrono::high_resolution_clock::now(); auto st2 = start2;
 
-	/*
-	while (getline(open_f, line)) {
-
-		// count line
-		++max;
-
-		std::stringstream ss(line);
-
-		// extract all words from line
-		while (ss >> word) {
-			splited.push_back(word);
-			// count word
-			++sk;
-		}
-	}
-	open_f.close();
-
-	stul = float(sk / max); // Susiskai?iuojama stulpeli? skai?ius, stulpeliai visada sveikas skai?ius, nes kievienoje eilut?je turi b?ti tiek pat duomen?
-
-	for (int i = stul; i < sk; i = i + stul) {
-		temp.vardas = splited[i];
-		temp.pavarde = splited[i + 1];
-		for (int j = i + 2; j < i + stul - 1; j++) temp.paz.push_back(stoi(splited[j]));
-		temp.egz = stoi(splited[i + stul - 1]);
-		temp.vid = vidurk(temp);
-		grupe.push_back(temp);
-		temp.paz.clear();
-	}
-	*/
-
 	if (!open_f.fail()) {    //10 sec improvement
 
 		getline(open_f, line);
@@ -213,8 +183,8 @@ void isrinkimas(std::list<studentas>& grupe, std::list<studentas>& Nel, std::lis
 		Kiet = grupe;
 	}
 
-	sort(Nel.begin(), Nel.end(), student);
-	sort(Kiet.begin(), Kiet.end(), student);
+	Kiet.sort(student);
+	Nel.sort(student);
 
 	auto end3 = std::chrono::high_resolution_clock::now();						// Baigiamas dalijimas ? dvi grupes
 	std::chrono::duration<double> diff3 = end3 - start3;						// Skirtumas (s)
