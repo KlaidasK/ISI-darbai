@@ -90,3 +90,92 @@ Deque
 | 100000  | 0.380264 s | 0.765129 s  | 0.497214 s  | 
 | 1000000  | 3.81546 s | 8.17611 s  | 5.07492 s  | 
 | 10000000  | 91.7171 s | 89.4753 s  | 84.9982 s  |
+
+
+# Subversija 1.0
+
+Instrukcija:
+1. Atsiūsti release
+2. Pasirinkti norimo konteinerio folderį
+3. Paleisti RUNME.bat
+4. Pasirinkti tarp 4 pasirinkimų (1 - savarankiško duomenų įvedimo, 2 - atsitiktinio generavimo, 3- duomenų nuskaitymo iš failo, 4 - failų generavimo iš esamo failo ar naujai sukurto)
+5. Pasirinkus 1, reikia pačiam įvesti studento duomenis (vardą, pavardę, pažymius), taip pat pasirinkimas tarp išvedimo tarp pažymių medianos ir vidurkio
+6. Pasirinkus 2 reikia įvesti kiek studentu generuos ir kiek maksimalus namų darbų pažymių skaičius
+7. Pasirinkus 3 reikia įvesti tekstinio failo pavadinamą, kuris turi būti tam pačiame folderį, kur RUNME.bat
+8. Pasirinkus 4 reikia pasirinkti strategija failo dalijimo tarp Nelaimėlių ir Kietekų.
+9. Rezultatams išvedus galime tęsti programą.
+
+Dalijimo strategijos:
+
+1 - Dalijimas vieno konteinerio į naujus į du
+2 - Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "Nelaimėliai". 
+
+
+Vector
+
+Strategija 1
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  |  0.0012167 s  |
+| 10000  |  0.0130275 s  | 
+| 100000  | 0.129624 s  | 
+| 1000000  |  1.39944 s  | 
+| 10000000  |  13.7691 s  |
+
+Strategija 2
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  |  0.130072 s  |
+| 10000  |  11.0471 s  | 
+| 100000  | 0.129624 s  | 
+| 1000000  |  1.39944 s  | 
+| 10000000  |  13.7691 s  |
+
+
+List
+
+Strategija 1
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  | 0.0041525 s  |
+| 10000  | 0.05309 s | 
+| 100000  | 0.659838 s  | 
+| 1000000  |  8.16042 s  | 
+| 10000000  | 144.564 s  |
+
+Strategija 2
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  |  0.0042793 s  |
+| 10000  |  0.0602951 s | 
+| 100000  | 0.899805 s  | 
+| 1000000  |  46.9941 s  | 
+| 10000000  |  130.7691 s  |
+
+Deque
+
+Strategija 1
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  | 0.0043546 s  |
+| 10000  |  0.049531 s  | 
+| 100000  | 0.497214 s  | 
+| 1000000  | 5.07492 s  | 
+| 10000000  | 84.9982 s  |
+
+Strategija 2
+
+| Įrašų dydis  | Dalijamo į dvi grupes laikas |
+| ------------- | ------------- |
+| 1000  |  0.004104 s  |
+| 10000  |  0.0499087 s  | 
+| 100000  | 0.503156 s  | 
+| 1000000  |  5.23824 s  | 
+| 10000000  |  13.7691 s  |
+
+
