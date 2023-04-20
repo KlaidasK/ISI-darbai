@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.25)
+project(List)
+include_directories(include)
+file(GLOB SOURCES "srs/*.cpp")
+add_executable(List ${SOURCES})
